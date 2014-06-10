@@ -1,0 +1,37 @@
+<html>
+<!--
+
+-->
+<head><script src="../Eulerlib/Euler.js" type="text/javascript"></script> </head>
+<body>
+
+<script>
+
+
+var largenumebr=600851475143;
+var rootofnumber = Math.sqrt(largenumebr);
+var solution=0;
+rootofnumber= Math.floor(rootofnumber);
+
+for (var i = rootofnumber; i >= 0; i--) 
+{
+	var a = fx(i);
+
+	if (a==i && ((largenumebr%a)==0))
+	{
+		document.writeln(i);
+
+		solution = i;
+		break;
+	}
+
+};
+
+console.log(solution);
+
+
+</script>
+
+
+</body>
+</html>
