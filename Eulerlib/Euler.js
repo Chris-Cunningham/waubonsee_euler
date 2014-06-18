@@ -19,3 +19,11 @@ function fx(x)
     
     return(count);
 }
+
+function reverse(s){
+    return s.split("").reverse().join("");
+}
+
+function MaxArray( array ){
+    return Math.max.apply( Math, array );
+};

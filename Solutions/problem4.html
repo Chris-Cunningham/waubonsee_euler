@@ -1,0 +1,57 @@
+<html>
+<!--
+
+-->
+<head><script src="../Eulerlib/Euler.js" type="text/javascript"></script> </head>
+<body>
+
+<script>
+
+var product=0;
+var list= [];
+
+for (var i = 999 ; i >= 101; i--) 
+{
+	var j = 999;
+	
+	//document.writeln('\n')
+	while (j>101)
+	{
+		//document.writeln(j);
+		product=j*i;
+
+		var check1 = product.toString();
+		var check2 = reverse(check1);
+			
+			check1 = Number(check1);
+			chech2 = Number(check2);
+/*
+			document.writeln(check1);
+			document.writeln('\n');
+			document.writeln(check2);
+			document.writeln('\n');
+			document.writeln('\n');
+*/
+
+		if (check1-check2==0) 
+			{
+				document.writeln(i);
+				document.writeln(j);
+				document.writeln('\n');
+				document.writeln('\n');
+				list.push(product);
+				//break;
+				//break;
+			};
+			j--;
+	};
+};
+console.log(MaxArray(list));
+
+
+
+</script>
+
+
+</body>
+</html>
