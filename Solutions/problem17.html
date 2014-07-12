@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Hello World!</title>
+<script src="../Eulerlib/Euler.js" type="text/javascript"></script>
+</head>
+
+<body>
+<script>
+
+var namesOfNumbers1to19 = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+var namesOfNumbers20to90 = ["", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+var namesOfNumbers100to1000 = ["", "hundredand", "thousand"];
+
+var stringlength="";
+var h=0; //""
+var i=0;
+
+for(var i=0; i<20; i++) //1-19
+{
+	stringlength+=namesOfNumbers1to19[i];
+	console.log(namesOfNumbers1to19[i]);
+}
+
+for(var j=1; j<9; j++) //20-99
+{
+	for(var k=0; k<10; k++)
+	{
+		stringlength+=namesOfNumbers20to90[j]+namesOfNumbers1to19[k];
+		console.log(namesOfNumbers20to90[j]+namesOfNumbers1to19[k]);
+	}
+}
+
+h=1; //"hundred"
+
+for(i=1; i<10; i++) //100-999
+{
+	for(var j=0; j<9; j++)
+	{
+		if (j==0)
+		{
+			for(var k=0; k<20; k++)
+			{
+				stringlength+=namesOfNumbers1to19[i]+namesOfNumbers100to1000[h]+namesOfNumbers20to90[j]+namesOfNumbers1to19[k];
+				console.log(namesOfNumbers1to19[i]+namesOfNumbers100to1000[h]+namesOfNumbers20to90[j]+namesOfNumbers1to19[k]);
+			}
+		}
+		else
+		{	
+			for(var k=0; k<10; k++)
+			{
+				stringlength+=namesOfNumbers1to19[i]+namesOfNumbers100to1000[h]+namesOfNumbers20to90[j]+namesOfNumbers1to19[k];
+				console.log(namesOfNumbers1to19[i]+namesOfNumbers100to1000[h]+namesOfNumbers20to90[j]+namesOfNumbers1to19[k]);
+			}
+		}
+	}
+}
+
+h=2; //"thousand"
+
+stringlength+=namesOfNumbers1to19[1]+namesOfNumbers100to1000[h]; //1000
+console.log(namesOfNumbers1to19[1]+namesOfNumbers100to1000[h]);
+
+console.log(stringlength.length-27);
+</script>
+</body>
+</html>

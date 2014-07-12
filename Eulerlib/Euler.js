@@ -1,29 +1,31 @@
 
-function fx(x)
+function isPrime(x)
 {
-    var count=1;
+    var check = 2;
+    var count = 1;
     var rem=0,sq=0;
     sq=(Math.sqrt(x)+1);
 
-    do
-    {
-        count++;
-        rem=x%count;
-
-        if (count>=sq)
+    if (x!=0&&x!=1) {
+        check=x;
+        do
         {
-            count=x;
-            break;
-        }
-    }while (rem!=0);
-    
-    return(count);
+            count++;
+            rem=x%count;
+            if (count>=sq)
+            {
+                count=x;
+                break;
+            }
+        }while (rem!=0);
+    };
+    return(count===check);
 }
 
 function reverse(s){
     return s.split("").reverse().join("");
 }
 
-function MaxArray( array ){
+Array.max = function( array ){
     return Math.max.apply( Math, array );
 };

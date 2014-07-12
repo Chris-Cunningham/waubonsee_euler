@@ -1,0 +1,33 @@
+<html>
+<!--
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.
+-->
+<head><script src="../Eulerlib/Euler.js" type="text/javascript"></script> </head>
+<body>
+
+<script>
+
+var sum=0;
+var count=0;
+
+for (var i = 0; i < 2000000; 1) {
+
+	if (isPrime(i)) {
+		//console.log(i);
+		sum+=i;
+		count++;
+	};
+	i++;
+
+
+};
+
+console.log(sum);
+
+</script>
+
+
+</body>
+</html>
